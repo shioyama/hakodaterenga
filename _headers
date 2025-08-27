@@ -1,0 +1,14 @@
+/*
+  Cache-Control: public, max-age=3600, must-revalidate
+  
+/index.html
+  Cache-Control: public, max-age=600, must-revalidate
+  
+/*.css
+  Cache-Control: public, max-age=86400, immutable
+  
+/*.js  
+  Cache-Control: public, max-age=86400, immutable
+  
+/img/*
+  Cache-Control: public, max-age=2592000, immutable
