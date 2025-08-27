@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Production build script for Jekyll site
+# Always builds with production URLs to _site directory
+
+echo "🏗️  Building site for production..."
+echo "   Output directory: _site"
+echo "   Using production URL: https://hakodaterenga.jp"
+echo ""
+
+# Always build with production environment
+JEKYLL_ENV=production bundle exec jekyll build
+
+echo ""
+echo "✅ Production build complete in _site/"
+echo "   Ready for deployment with ./deploy.sh"

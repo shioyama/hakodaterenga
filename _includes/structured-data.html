@@ -1,0 +1,77 @@
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  },
+  "headline": "{{ page.title | default: site.title }}",
+  "description": "{{ page.description | default: site.description }}",
+  "image": [
+    "{{ site.url }}/img/benten-warehouses-yugata.png",
+    "{{ site.url }}/img/hero-warehouses.jpg",
+    "{{ site.url }}/img/social-card-og.jpg"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "{{ site.author }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.author }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/img/favicon-192.png"
+    }
+  },
+  "datePublished": "2025-08-01",
+  "dateModified": "2025-08-27",
+  "keywords": "函館,弁天町,レンガ,煉瓦,弁天倉庫,函館どつくレンガ倉庫,函館どつく,名村造船,山田総合"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "函館の隠れた煉瓦",
+    "item": "{{ site.url }}"
+  }]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Place",
+  "name": "函館どつくレンガ倉庫（弁天倉庫）",
+  "alternateName": ["弁天倉庫", "函館どつくレンガ倉庫"],
+  "description": "明治34年建造の赤レンガ倉庫群。函館の産業遺産として125年の歴史を持つ。",
+  "url": "{{ site.url }}",
+  "image": "{{ site.url }}/img/hero-warehouses.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "弁天町20",
+    "addressLocality": "函館市",
+    "addressRegion": "北海道",
+    "addressCountry": "JP"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.7769,
+    "longitude": 140.7089
+  },
+  "publicAccess": true,
+  "isAccessibleForFree": true,
+  "additionalProperty": {
+    "@type": "PropertyValue",
+    "name": "歴史的建造物",
+    "value": "明治34年（1901年）建造"
+  }
+}
+</script>

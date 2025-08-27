@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://hakodaterenga.jp/</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://hakodaterenga.jp/img/hero-warehouses.jpg</image:loc>
+      <image:title>函館どつくレンガ倉庫（弁天倉庫）</image:title>
+      <image:caption>明治34年建造の函館最古級の赤レンガ倉庫群</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hakodaterenga.jp/img/benten-warehouses-yugata.jpg</image:loc>
+      <image:title>夕方の函館どつくレンガ倉庫</image:title>
+      <image:caption>夕日に照らされる125年の歴史を持つ赤レンガ倉庫</image:caption>
+    </image:image>
+  </url>
+</urlset>

@@ -1,0 +1,24 @@
+# Jekyll Configuration
+title: 函館の隠れた煉瓦 - 弁天倉庫
+description: 函館弁天町にひっそりと佇む赤レンガ倉庫群。明治34年から125年間、函館の海を見つめ続けてきた弁天倉庫（函館どつくレンガ倉庫）が解体の危機に。消えゆく前に、その物語を紐解きます。
+url: https://hakodaterenga.jp
+author: 弁天倉庫を守る会
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# SEO settings
+social:
+  twitter: hakodaterenga
+
+# Google Analytics
+google_analytics: AW-17453896238
+
+# Exclude files from build
+exclude:
+  - deploy.sh
+  - README.md
+  - .gitignore

@@ -1,0 +1,41 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ deploy ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1  # Shallow clone, we don't need history
+
+      - name: Create deployment directory
+        run: |
+          # Create a temporary directory outside the current directory
+          DEPLOY_DIR=$(mktemp -d)
+          # Copy all files except .git and other excluded files
+          rsync -av --exclude='.git' --exclude='.github' --exclude='deployment' --exclude='.gitignore' --exclude='README.md' --exclude='LICENSE' --exclude='deploy.sh' . "$DEPLOY_DIR/"
+          # Move the deployment directory to a known location
+          mv "$DEPLOY_DIR" deployment
+          
+      - name: Deploy to gh-pages branch
+        run: |
+          cd deployment
+          git init
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Deploy website - $(date +'%Y-%m-%d %H:%M:%S')"
+          git branch -M gh-pages
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git push -f origin gh-pages
